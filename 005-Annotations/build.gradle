@@ -1,0 +1,3 @@
+plugins {
+    id 'me.ujjawal.learning.java.java-application-conventions'
+}
