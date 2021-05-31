@@ -27,10 +27,10 @@ package me.ujjawal.learning_java.core;
  * JAVA relies on something called as CLASSPATH. Imagine CLASSPATH to be something similar to PATH. While PATH
  * defines the location of binaries for the operating system, CLASSPATH defines the location of classes for JAVA.<br>
  * Build systems like ANT, Maven and Gradle allow standard ways of allowing JARs to be included in projects.<br>
- * The first thing that you would notice here is the keyword <code>public</code>. This keyword is one of the scope
- * specifiers. Scope specifiers specify which all pieces of code in the project can see or make use of this
+ * The first thing that you would notice here is the keyword <code>public</code>. This keyword is one of the access
+ * specifiers. Access specifiers specify which all pieces of code in the project can see or make use of this
  * functionality and how. The functionality in reference can be a class, function, constant or variable. These are
- * some of the scope specifiers:<br>
+ * some of the access specifiers:<br>
  * <ol>
  *     <li><code>public</code> - Accessible everywhere.</li>
  *     <li><code>protected</code> - Accessible in this class and its subclasses, and this package.</li>
@@ -38,6 +38,9 @@ package me.ujjawal.learning_java.core;
  *     <li><code>{DEFAULT}</code> - Accessible everywhere within this package.</li>
  * </ol>
  * <br>
+ * After the access specifier we specify the keyword <code>class</code> to denote that this is a class. We follow
+ * this with the class name, in this case <code>HelloWorld</code>. The code of the class if put in curly-brackets ({}
+ * ). In general, any piece of code enclosed withing curly-brackets is called a <b>block of code</b>.
  * References:
  * <ol>
  *     <li>{@link https://docs.oracle.com/javase/tutorial/java/package/packages.html}</li>
@@ -45,7 +48,48 @@ package me.ujjawal.learning_java.core;
  * </ol>
  */
 public class HelloWorld {
+
+    /**
+     * A class can contain member variables / constants.<br>
+     * A variable or constant will have to be qualified with a data-type to tell JAVA what domain of values do we
+     * expect it to hold. Specifying the data-type of a variable is also called variable declaration. Additionally,
+     * at the time of declaration we may specify a value for the variable. This is called variable definition or
+     * setting the initial value of the variable.<br>
+     */
+    private static final String HELLO_WORLD = "Hello World";
+
+    /**
+     * A class can contain member functions or methods. A method has a signature which is made up of:
+     * <ol>
+     *     <li>Return data-type of the method</li>
+     *     <li>Name of the method</li>
+     *     <li>Sequence of arguments (data-type and names)</li>
+     * </ol>
+     * Additionally, there might be checked exceptions thrown by the method which need to be specified as a part of
+     * the method declaration.<br>
+     * Note: <code>main</code> is a special method. Its the first method that gets executed / called when we try to
+     * run a class.
+     * @param args
+     */
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        /**
+         * <code>System</code> is a class that is provided by JAVA (its a part of java.lang package) and contains a
+         * limited set of utilities which we might be interested in as we start writing basic Java code. Some of
+         * these utilities are references to:
+         * 1. Standard output stream: out
+         * 2. Standard error stream: err
+         * 3. Standard input stream: in
+         */
+        System.out.println(HELLO_WORLD);
+        System.out.println("Current time in millis: " + System.currentTimeMillis());
+
+        long startTimeNanos = System.nanoTime();
+        System.out.println("Environment: " + System.getenv());
+        long endTimeNanos = System.nanoTime();
+
+        long durationNanos = endTimeNanos - startTimeNanos;
+        System.out.println("Duration in nanos: " + durationNanos);
+
+        System.err.println("Trying to print an error");
     }
 }
