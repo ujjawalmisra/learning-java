@@ -11,6 +11,7 @@
  *     <li>{@link me.ujjawal.learning_java.core.DoWhileLoop}</li>
  *     <li>{@link me.ujjawal.learning_java.core.IfElse}</li>
  *     <li>{@link me.ujjawal.learning_java.core.SwitchCase}</li>
+ *     <li>{@link me.ujjawal.learning_java.core.Functions}</li>
  * </ol>
  */
 package me.ujjawal.learning_java.core;
