@@ -14,7 +14,7 @@ public class DoWhileLoop {
         int i = 0;
         do {
             System.out.println(i);
-        } while(++i <= 5);
+        } while (++i <= 5);
 
         /**
          * ~~ Simple do-while-loop with single statement ~~
@@ -24,7 +24,7 @@ public class DoWhileLoop {
         int j = 0;
         do
             System.out.println(j);
-        while(++j <= 5);
+        while (++j <= 5);
 
         /**
          * ~~ Nested do-while-loops ~~
@@ -36,9 +36,9 @@ public class DoWhileLoop {
             do {
                 System.out.println(String.format("%d + %d = %d", k, l, k + l));
                 l++;
-            } while(l <=2);
+            } while (l <= 2);
             k++;
-        } while(k <= 3);
+        } while (k <= 3);
 
         /**
          * ~~ Infinite do-while-loop ~~
@@ -49,9 +49,9 @@ public class DoWhileLoop {
         int m = 1;
         do {
             System.out.println(m++);
-            if(12 == m) {
+            if (12 == m) {
                 break;
             }
-        } while(true);
+        } while (true);
     }
 }

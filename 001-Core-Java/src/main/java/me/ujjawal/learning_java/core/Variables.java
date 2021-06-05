@@ -37,7 +37,7 @@ public class Variables {
         /**
          * Multiple variable declaration.
          */
-        int x,y;
+        int x, y;
         x = 1;
         y = 2;
         System.out.println("x --> " + x);
@@ -46,7 +46,7 @@ public class Variables {
         /**
          * Multiple variable declaration and definition
          */
-        int a,b = 4,c = 5;
+        int a, b = 4, c = 5;
         a = 3;
         System.out.println("a --> " + a);
         System.out.println("b --> " + b);

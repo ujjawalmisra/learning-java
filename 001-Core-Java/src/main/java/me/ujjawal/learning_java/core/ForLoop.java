@@ -13,7 +13,7 @@ public class ForLoop {
          * Note that all of these 3 parts are optional.
          */
         System.out.println("~~~~ simple for-loop (with block of statements) ~~~~");
-        for(int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 5; i++) {
             /**
              * This is the body of the for-loop and contains the set of statements that should be run as a part of
              * the loop. As you would have noticed, its in a block.
@@ -26,15 +26,15 @@ public class ForLoop {
          * If there is a single statement in a for-loop you may exclude the curly braces.
          */
         System.out.println("~~~~ simple for-loop (with single statement) ~~~~");
-        for(int i = 3; i >= 1; i--)
+        for (int i = 3; i >= 1; i--)
             System.out.println(i);
 
         /**
          * ~~ Nested for-loops ~~
          */
         System.out.println("~~~~ nested for-loop ~~~~");
-        for(int i = 1; i <= 3; i++) {
-            for(int j = 1; j <= 2; j++) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 2; j++) {
                 System.out.println(String.format("%d + %d = %d", i, j, i + j));
             }
         }
@@ -46,8 +46,8 @@ public class ForLoop {
          * for-each loop allows us to iterate over the array element-by-element without using an index.
          */
         System.out.println("~~~~ for-each-loop ~~~~");
-        int [] x = {1,2,3,5,7};
-        for(int i : x) {
+        int[] x = {1, 2, 3, 5, 7};
+        for (int i : x) {
             System.out.println(i);
         }
 
@@ -60,10 +60,10 @@ public class ForLoop {
          */
         System.out.println("~~~~ labelled for-loop ~~~~");
         outer:
-        for(int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 3; i++) {
             inner:
-            for(int j = 1; j <= 2; j++) {
-                if(2 == i && 2 == j) {
+            for (int j = 1; j <= 2; j++) {
+                if (2 == i && 2 == j) {
                     break inner;
                 }
                 System.out.println(String.format("%d + %d = %d", i, j, i + j));
@@ -77,9 +77,9 @@ public class ForLoop {
          * Normally people write infinite loops by omitting all the 3 parts.
          */
         System.out.println("~~~~ infinite for-loop ~~~~");
-        for(int i = 1;;i++) {
+        for (int i = 1; ; i++) {
             System.out.println(i);
-            if(12 == i) {
+            if (12 == i) {
                 break;
             }
         }

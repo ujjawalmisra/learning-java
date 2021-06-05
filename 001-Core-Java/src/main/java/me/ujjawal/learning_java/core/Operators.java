@@ -28,15 +28,15 @@ public class Operators {
          * Arithmetic - multiplicative
          */
         short d = 5, e = 2;
-        System.out.println(String.format("%d * %d --> %d", d, e, d*e));
-        System.out.println(String.format("%d / %d --> %d", d, e, d/e));
-        System.out.println(String.format("%d %% %d --> %d", d, e, d%e));
+        System.out.println(String.format("%d * %d --> %d", d, e, d * e));
+        System.out.println(String.format("%d / %d --> %d", d, e, d / e));
+        System.out.println(String.format("%d %% %d --> %d", d, e, d % e));
 
         /**
          * Arithmetic - additive
          */
-        System.out.println(String.format("%d + %d --> %d", d, e, d+e));
-        System.out.println(String.format("%d - %d --> %d", d, e, d-e));
+        System.out.println(String.format("%d + %d --> %d", d, e, d + e));
+        System.out.println(String.format("%d - %d --> %d", d, e, d - e));
 
         /**
          * Shift - shift
@@ -89,17 +89,39 @@ public class Operators {
          */
         short init = 3;
         short n, p = 1;
-        n = init; n += p; System.out.println(String.format("%d += %d --> %d", init, p, n));
-        n = init; n -= p; System.out.println(String.format("%d -= %d --> %d", init, p, n));
-        n = init; n *= p; System.out.println(String.format("%d *= %d --> %d", init, p, n));
-        n = init; n /= p; System.out.println(String.format("%d /= %d --> %d", init, p, n));
-        n = init; n %= p; System.out.println(String.format("%d %%= %d --> %d", init, p, n));
-        n = init; n &= p; System.out.println(String.format("%d &= %d --> %d", init, p, n));
-        n = init; n |= p; System.out.println(String.format("%d |= %d --> %d", init, p, n));
-        n = init; n ^= p; System.out.println(String.format("%d ^= %d --> %d", init, p, n));
-        n = init; n <<= p; System.out.println(String.format("%d <<= %d --> %d", init, p, n));
-        n = init; n >>= p; System.out.println(String.format("%d >>= %d --> %d", init, p, n));
-        n = init; n >>>= p; System.out.println(String.format("%d >>>= %d --> %d", init, p, n));
+        n = init;
+        n += p;
+        System.out.println(String.format("%d += %d --> %d", init, p, n));
+        n = init;
+        n -= p;
+        System.out.println(String.format("%d -= %d --> %d", init, p, n));
+        n = init;
+        n *= p;
+        System.out.println(String.format("%d *= %d --> %d", init, p, n));
+        n = init;
+        n /= p;
+        System.out.println(String.format("%d /= %d --> %d", init, p, n));
+        n = init;
+        n %= p;
+        System.out.println(String.format("%d %%= %d --> %d", init, p, n));
+        n = init;
+        n &= p;
+        System.out.println(String.format("%d &= %d --> %d", init, p, n));
+        n = init;
+        n |= p;
+        System.out.println(String.format("%d |= %d --> %d", init, p, n));
+        n = init;
+        n ^= p;
+        System.out.println(String.format("%d ^= %d --> %d", init, p, n));
+        n = init;
+        n <<= p;
+        System.out.println(String.format("%d <<= %d --> %d", init, p, n));
+        n = init;
+        n >>= p;
+        System.out.println(String.format("%d >>= %d --> %d", init, p, n));
+        n = init;
+        n >>>= p;
+        System.out.println(String.format("%d >>>= %d --> %d", init, p, n));
 
     }
 }

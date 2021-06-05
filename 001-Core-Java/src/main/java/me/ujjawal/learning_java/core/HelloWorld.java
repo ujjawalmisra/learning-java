@@ -69,6 +69,7 @@ public class HelloWorld {
      * the method declaration.<br>
      * Note: <code>main</code> is a special method. Its the first method that gets executed / called when we try to
      * run a class.
+     *
      * @param args
      */
     public static void main(String[] args) {

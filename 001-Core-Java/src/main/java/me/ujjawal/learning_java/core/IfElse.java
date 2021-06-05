@@ -14,7 +14,7 @@ public class IfElse {
          * statement the curly-braces may be omitted.
          */
         int age = 1;
-        if(18 <= age) {
+        if (18 <= age) {
             System.out.println("The age is that of an adult");
         }
 
@@ -24,7 +24,7 @@ public class IfElse {
          * statements of else-block happens.
          */
         String gender = "male";
-        if("male" == gender) {
+        if ("male" == gender) {
             System.out.println("Gender is male");
         } else {
             System.out.println("Gender is female");
@@ -37,11 +37,11 @@ public class IfElse {
          * condition that is true, the statement-block corresponding to it gets executed.
          */
         String aashram;
-        if(25 > age)
+        if (25 > age)
             aashram = "brahmacharya";
-        else if(48 > age)
+        else if (48 > age)
             aashram = "grihastha";
-        else if(72 > age)
+        else if (72 > age)
             aashram = "vaanprastha";
         else
             aashram = "sanyaas";
@@ -56,8 +56,8 @@ public class IfElse {
          */
         boolean tookDrivingTest = false;
         boolean qualifiedDrivingTest = false;
-        if(tookDrivingTest) {
-            if(qualifiedDrivingTest) {
+        if (tookDrivingTest) {
+            if (qualifiedDrivingTest) {
                 System.out.println("You are eligible to drive");
             } else {
                 System.out.println("You need to take the drive test again after learning under an instructor");

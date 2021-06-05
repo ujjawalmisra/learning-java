@@ -11,7 +11,7 @@ public class WhileLoop {
          */
         System.out.println("~~~~ simple while-loop (with block of statements) ~~~~");
         int i = 0;
-        while(++i <= 5) {
+        while (++i <= 5) {
             /**
              * This is the body of the while-loop and contains the set of statements that should be run as a part of
              * the loop. As you would have noticed, its in a block.
@@ -25,7 +25,7 @@ public class WhileLoop {
          */
         System.out.println("~~~~ simple while-loop (with single statement) ~~~~");
         int j = 0;
-        while(++j <= 5)
+        while (++j <= 5)
             System.out.println(j);
 
         /**
@@ -42,9 +42,9 @@ public class WhileLoop {
          */
         System.out.println("~~~~ nested while-loop ~~~~");
         int k = 1;
-        while(k <= 3) {
+        while (k <= 3) {
             int l = 1;
-            while(l <=2) {
+            while (l <= 2) {
                 System.out.println(String.format("%d + %d = %d", k, l, k + l));
                 l++;
             }
@@ -58,9 +58,9 @@ public class WhileLoop {
          */
         System.out.println("~~~~ infinite while-loop ~~~~");
         int m = 1;
-        while(true) {
+        while (true) {
             System.out.println(m++);
-            if(12 == m) {
+            if (12 == m) {
                 break;
             }
         }

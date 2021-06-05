@@ -171,7 +171,7 @@ public class Types {
 
         System.out.println("~~~~~~~~ Parsed from String ~~~~~~~~");
         Byte byteFromString = Byte.parseByte("123");
-        Boolean booleanFromString  = Boolean.parseBoolean("false");
+        Boolean booleanFromString = Boolean.parseBoolean("false");
         System.out.println("byteFromString --> " + byteFromString);
         System.out.println("booleanFromString --> " + (!booleanFromString));
 
@@ -182,7 +182,7 @@ public class Types {
         System.out.println("long --> [" + Long.MIN_VALUE + ", " + Long.MAX_VALUE + "]");
         System.out.println("float --> [" + Float.MIN_VALUE + ", " + Float.MAX_VALUE + "]");
         System.out.println("double --> [" + Double.MIN_VALUE + ", " + Double.MAX_VALUE + "]");
-        System.out.println("char --> [" + (int)Character.MIN_VALUE + ", " + (int)Character.MAX_VALUE + "]");
+        System.out.println("char --> [" + (int) Character.MIN_VALUE + ", " + (int) Character.MAX_VALUE + "]");
 
         /**
          * Some memory details:
