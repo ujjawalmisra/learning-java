@@ -4,10 +4,12 @@ public class ForLoop {
     public static void main(String[] args) {
         /**
          * ~~ Simple for-loop ~~
-         * It has 3 parts:
+         * It has 4 parts:
          * a. Initialization - where we set the base variable(s) before starting the loop
          * b. Condition - where we check whether the iteration of the loop should be run based on a boolean expression
          * c. Modulation - where we change the value of the variable(s) to affect the next run of the loop
+         * d. Statement(s) -- where we define the logic or set of statements to be executed for each iteration of the
+         * loop
          * Note that all of these 3 parts are optional.
          */
         System.out.println("~~~~ simple for-loop (with block of statements) ~~~~");
