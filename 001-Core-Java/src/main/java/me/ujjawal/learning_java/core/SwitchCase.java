@@ -8,8 +8,8 @@ package me.ujjawal.learning_java.core;
  * If we were to use-if else to evaluate an expression to one of possible N values we would have used a
  * if-else-if-else-.. ladder. switch-case is another way to do that.<br>
  * The evaluation of the switch-expression must be byte (or Byte), short (or Short), int (or Integer), long (or Long)
- * , enum or String. The evaluated value must always be a literal or constant. Variables can't be used as the
- * evaluated value.
+ * , char (or Character), enum or String. The evaluated value must always be a literal or constant. Variables can't be
+ * used as the evaluated value.
  */
 public class SwitchCase {
     public static void main(String[] args) {
