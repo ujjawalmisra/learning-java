@@ -40,7 +40,7 @@ package me.ujjawal.learning_java.core;
  * <br>
  * After the access specifier we specify the keyword <code>class</code> to denote that this is a class. We follow
  * this with the class name, in this case <code>HelloWorld</code>. The code of the class if put in curly-brackets ({}
- * ). In general, any piece of code enclosed withing curly-brackets is called a <b>block of code</b>.
+ * ). In general, any piece of code enclosed withing curly-brackets is called a <b>block of code</b>.<br>
  * References:
  * <ol>
  *     <li>{@link https://docs.oracle.com/javase/tutorial/java/package/packages.html}</li>
