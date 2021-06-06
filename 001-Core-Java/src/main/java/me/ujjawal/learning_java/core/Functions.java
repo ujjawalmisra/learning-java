@@ -70,10 +70,21 @@ public class Functions {
                 sum(1, 2, 3, 4, -2, -1)));
     }
 
+    /**
+     * Computes the sum of 2 integers
+     * @param a
+     * @param b
+     * @return the computed sum
+     */
     private static int sum(int a, int b) {
         return a + b;
     }
 
+    /**
+     * Computes the factorial of a number
+     * @param n the number whose factorial has to be computed
+     * @return the computed factorial
+     */
     private static int factorial(int n) {
         if (0 == n) {
             return 1;
@@ -81,6 +92,11 @@ public class Functions {
         return n * factorial(n - 1);
     }
 
+    /**
+     * Computes the sum of any number of integers
+     * @param x varargs sequence of integers
+     * @return the computed sum
+     */
     private static int sum(int... x) {
         int sum = 0;
         for (int y : x) {
