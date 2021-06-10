@@ -31,7 +31,7 @@ public class StringBasics {
         System.out.println("~~~~ reference and values ~~~~");
         String a = "World";
         String b = "World";
-        System.out.println("a == b --> true");
+        System.out.println("a == b --> " + (a == b));
         String c = new String("World");
         System.out.println("a == c --> " + (a == c));
         System.out.println("~~~~ /reference and values ~~~~");
