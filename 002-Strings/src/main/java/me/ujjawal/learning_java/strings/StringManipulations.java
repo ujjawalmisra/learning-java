@@ -13,7 +13,7 @@ public class StringManipulations {
          */
         String strHello = "Hello";
         String strWorld = "World";
-            String helloWorld = strHello + strWorld;
+        String helloWorld = strHello + strWorld;
         System.out.println(String.format("%s + %s --> %s", strHello, strWorld, helloWorld));
         System.out.println("concat() --> " + strHello.concat(strWorld));
         System.out.println("strHello --> " + strHello);
