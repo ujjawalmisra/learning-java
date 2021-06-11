@@ -1,4 +1,4 @@
-package me.ujjawal.learning_java.oop
+package me.ujjawal.learning_java.oop;
 
-class Inheritance {
+public class Inheritance {
 }
