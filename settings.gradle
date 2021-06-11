@@ -21,3 +21,5 @@ include('010-REST')
 include('011-Cassandra')
 include('012-Redis')
 include('013-Kafka')
+include '014-Design-Patterns'
+
