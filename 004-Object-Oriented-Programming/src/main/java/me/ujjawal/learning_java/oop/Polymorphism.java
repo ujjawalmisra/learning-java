@@ -39,10 +39,20 @@ public class Polymorphism {
         System.out.println("~~~~ Runtime Polymorphism : Method overriding ~~~~");
         Animal dog = new Dog(); //upcasting
         Animal wolf = new Wolf(); //upcasting
-        System.out.println(dog.makeASound());
+        System.out.println("dog.makeASound() --> " + dog.makeASound());
         // dog.playWith(); --> Error
-        System.out.println(wolf.makeASound());
+        System.out.println("wolf.makeASound() --> " + wolf.makeASound());
         // wolf.playWith(); --> Error
+
+        /**
+         * ~~ Covariant return types - Method overriding ~~
+         * The get method in Dog and Wolf classes are overrides of the get method in Animal class. The point to be
+         * noted is that the return types in the Base-class and Sub-class are different. This is allowed because the
+         * return types refer to covariants of the same type.
+         * Reference: https://www.javatpoint.com/covariant-return-type
+         */
+        System.out.println("dog.get().makeASound() --> " + dog.get().makeASound());
+        System.out.println("wolf.get().makeASound() --> " + wolf.get().makeASound());
     }
 
     static class AdditionOperator {
@@ -102,6 +112,10 @@ public class Polymorphism {
         public String makeASound() {
             return "what what";
         }
+
+        public Animal get() {
+            return this;
+        }
     }
 
     static class Dog extends Animal {
@@ -110,15 +124,26 @@ public class Polymorphism {
             return "bark bark";
         }
 
+        @Override
+        public Dog get() {
+            return this;
+        }
+
         public void playWith() {
             System.out.println("playing with the dog");
         }
     }
 
     static class Wolf extends Animal {
+
         @Override
         public String makeASound() {
             return "howl howl";
+        }
+
+        @Override
+        public Wolf get() {
+            return this;
         }
 
         public void playWith() {
