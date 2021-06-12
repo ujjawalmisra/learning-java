@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 /**
  * {@link java.util.List} is subclass of {@link java.util.Collection}. Both are interfaces. There are some specific
- * implementations of List like {@link java.util.ArrayList}.
+ * implementations of List like {@link java.util.ArrayList} and {@link LinkedList}.
  */
 public class TheLists {
 
