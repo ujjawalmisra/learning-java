@@ -28,7 +28,7 @@ public class TheSets {
         System.out.println("isEmpty() --> " + set.isEmpty());
 
 
-        List<Integer> oddList = Arrays.asList(3,5,1);
+        List<Integer> oddList = Arrays.asList(3, 5, 1);
         System.out.println("oddList --> " + oddList);
 
         /**
@@ -39,11 +39,11 @@ public class TheSets {
         System.out.println("set.addAll(oddList) --> " + set.addAll(oddList));
         System.out.println("set --> " + set);
 
-        List<Integer> t1 = Arrays.asList(3,5);
+        List<Integer> t1 = Arrays.asList(3, 5);
         System.out.println("set.removeAll(t1) --> " + set.removeAll(t1));
         System.out.println("set --> " + set);
 
-        List<Integer> t2 = Arrays.asList(4,1);
+        List<Integer> t2 = Arrays.asList(4, 1);
         System.out.println("set.retainAll(t2) --> " + set.retainAll(t2));
         System.out.println("set --> " + set);
 
@@ -70,7 +70,7 @@ public class TheSets {
 
     private static void seed(Set<Integer> set) {
         set.clear();
-        for(int i = 0; i <=5; i++) {
+        for (int i = 0; i <= 5; i++) {
             set.add(i);
         }
     }
@@ -79,7 +79,7 @@ public class TheSets {
         StringBuilder sb = new StringBuilder();
         Iterator<T> iterator = set.iterator();
         while (iterator.hasNext()) {
-            if(0 < sb.length()) {
+            if (0 < sb.length()) {
                 sb.append(", ");
             }
             T element = iterator.next();
@@ -90,8 +90,8 @@ public class TheSets {
 
     private static <T> String usingForEach(Set<T> set) {
         StringBuilder sb = new StringBuilder();
-        for(T element : set) {
-            if(0 < sb.length()) {
+        for (T element : set) {
+            if (0 < sb.length()) {
                 sb.append(", ");
             }
             sb.append(element);
@@ -114,10 +114,10 @@ public class TheSets {
     }
 
     private static int sumOnlyOdd(Set<Integer> set) {
-        return set.stream().mapToInt(e -> e).filter(e -> 0 != e%2).sum();
+        return set.stream().mapToInt(e -> e).filter(e -> 0 != e % 2).sum();
     }
 
     private static Set<Integer> getOnlyOdd(Set<Integer> set) {
-        return set.stream().filter(e -> 0 != e%2).collect(Collectors.toSet());
+        return set.stream().filter(e -> 0 != e % 2).collect(Collectors.toSet());
     }
 }

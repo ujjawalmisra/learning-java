@@ -31,7 +31,7 @@ public class TheLists {
          * ~~ Converting to and from arrays ~~
          */
         System.out.println("~~~~ convert to/from arrays ~~~~");
-        List<Integer> oddList = Arrays.asList(3,5,1);
+        List<Integer> oddList = Arrays.asList(3, 5, 1);
         System.out.println("oddList --> " + oddList);
         Integer[] oddArr = oddList.toArray(new Integer[0]);
         System.out.println("oddArr --> " + Arrays.toString(oddArr));
@@ -44,11 +44,11 @@ public class TheLists {
         System.out.println("list.addAll(oddList) --> " + list.addAll(oddList));
         System.out.println("list --> " + list);
 
-        List<Integer> t1 = Arrays.asList(3,5);
+        List<Integer> t1 = Arrays.asList(3, 5);
         System.out.println("list.removeAll(t1) --> " + list.removeAll(t1));
         System.out.println("list --> " + list);
 
-        List<Integer> t2 = Arrays.asList(4,1);
+        List<Integer> t2 = Arrays.asList(4, 1);
         System.out.println("list.retainAll(t2) --> " + list.retainAll(t2));
         System.out.println("list --> " + list);
 
@@ -76,7 +76,7 @@ public class TheLists {
 
     private static void seed(List<Integer> list) {
         list.clear();
-        for(int i = 0; i <=5; i++) {
+        for (int i = 0; i <= 5; i++) {
             list.add(i);
         }
     }
@@ -85,7 +85,7 @@ public class TheLists {
         StringBuilder sb = new StringBuilder();
         Iterator<T> iterator = list.iterator();
         while (iterator.hasNext()) {
-            if(0 < sb.length()) {
+            if (0 < sb.length()) {
                 sb.append(", ");
             }
             T element = iterator.next();
@@ -96,8 +96,8 @@ public class TheLists {
 
     private static <T> String usingForEach(List<T> list) {
         StringBuilder sb = new StringBuilder();
-        for(T element : list) {
-            if(0 < sb.length()) {
+        for (T element : list) {
+            if (0 < sb.length()) {
                 sb.append(", ");
             }
             sb.append(element);
@@ -120,10 +120,10 @@ public class TheLists {
     }
 
     private static int sumOnlyOdd(List<Integer> list) {
-        return list.stream().mapToInt(e -> e).filter(e -> 0 != e%2).sum();
+        return list.stream().mapToInt(e -> e).filter(e -> 0 != e % 2).sum();
     }
 
     private static List<Integer> getOnlyOdd(List<Integer> list) {
-        return list.stream().filter(e -> 0 != e%2).collect(Collectors.toList());
+        return list.stream().filter(e -> 0 != e % 2).collect(Collectors.toList());
     }
 }

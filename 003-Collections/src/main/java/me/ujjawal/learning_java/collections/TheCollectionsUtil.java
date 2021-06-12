@@ -17,7 +17,7 @@ public class TheCollectionsUtil {
     public static void main(String[] args) {
 
         System.out.println("~~~~ Collections utility methods for list ~~~~");
-        List<Integer> list = Arrays.asList(1,2,3,4,5);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         System.out.println("list --> " + list);
         Collections.reverse(list);
         System.out.println("list (after reverse) --> " + list);
