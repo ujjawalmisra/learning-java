@@ -1,6 +1,5 @@
 /**
  * <ol>
- *     <li>{@link me.ujjawal.learning_java.collections.PrimitivesAndWrappers}</li>
  *     <li>{@link me.ujjawal.learning_java.collections.Autoboxing}</li>
  *     <li>{@link me.ujjawal.learning_java.collections.Unboxing}</li>
  *     <li>{@link me.ujjawal.learning_java.collections.TheArrays}</li>
