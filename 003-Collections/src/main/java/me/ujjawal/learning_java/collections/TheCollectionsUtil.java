@@ -1,7 +1,6 @@
 package me.ujjawal.learning_java.collections;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,5 +32,17 @@ public class TheCollectionsUtil {
         System.out.println("list (after swap) --> " + list);
         Collections.fill(list, -1);
         System.out.println("list (after fill) --> " + list);
+
+        List<String> emptyListOfStrings = Collections.emptyList();
+        System.out.println("emptyListOfStrings --> " + emptyListOfStrings);
+        /**
+         * Following operations are not permitted as emptyList is immutable.
+         */
+//        emptyListOfStrings.add("Hello");
+//        System.out.println("emptyListOfStrings --> " + emptyListOfStrings);
+
+        /**
+         * Please check the remaining methods in Collections class to get an idea of what all can you do.
+         */
     }
 }
