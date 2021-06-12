@@ -3,13 +3,20 @@ package me.ujjawal.learning_java.oop;
 import java.util.Arrays;
 
 /**
- * Polymorphism is an OOP concept which specifies that the functionality depends on the context.
+ * Polymorphism is an OOP concept which specifies that the functionality depends on the context.<br>
+ * In Java Polymorphism can be achieved by:<br>
+ * <ol>
+ *     <li>Method overloading - also referred to as Compile-time Polymorphism</li>
+ *     <li>Method overriding - also referred to as Runtime Polymorphism or Dynamic Method Dispatch</li>
+ * </ol>
  */
 public class Polymorphism {
     public static void main(String[] args) {
         /**
+         * ~~ Compile-time Polymorphism ~~
          * ~~ Method overloading ~~
          */
+        System.out.println("~~~~ Compile-time Polymorphism : Method overloading ~~~~");
         AdditionOperator operator = new AdditionOperator();
         System.out.println(String.format("%d + %d --> %d", 1, 2, operator.sum(1, 2)));
         System.out.println(String.format("%d + %d + %d --> %d", 1, 2, 3, operator.sum(1, 2, 3)));
@@ -18,24 +25,24 @@ public class Polymorphism {
         /**
          * ~~ Constructor overloading ~~
          */
+        System.out.println("~~~~ Compile-time Polymorphism : Constructor overloading ~~~~");
         Person personA = new Person("Pallavi", 20);
         Person personB = new Person("Sunand");
         System.out.println("personA --> " + personA);
         System.out.println("personB --> " + personB);
 
-        Dog dog = new Dog();
-        Wolf wolf = new Wolf();
+        /**
+         * ~~ Runtime Polymorphism or Dynamic Method Dispatch ~~
+         * In case of an overridden method the call to it is decided at the runtime based on what is the type of the
+         * object referred to by the variable.
+         */
+        System.out.println("~~~~ Runtime Polymorphism : Method overriding ~~~~");
+        Animal dog = new Dog(); //upcasting
+        Animal wolf = new Wolf(); //upcasting
         System.out.println(dog.makeASound());
-        dog.playWith();
+        // dog.playWith(); --> Error
         System.out.println(wolf.makeASound());
-        wolf.playWith();
-
-        Animal d = dog;
-        Animal w = wolf;
-        System.out.println(d.makeASound());
-        // d.playWith(); --> Error
-        System.out.println(w.makeASound());
-        // w.playWith(); --> Error
+        // wolf.playWith(); --> Error
     }
 
     static class AdditionOperator {
