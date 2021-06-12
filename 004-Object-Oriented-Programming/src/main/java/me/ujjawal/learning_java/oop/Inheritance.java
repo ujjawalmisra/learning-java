@@ -23,15 +23,15 @@ public class Inheritance {
         car.start();
     }
 
-    interface Rideable {
+    private interface Rideable {
         void ride();
     }
 
-    interface Driveable {
+    private interface Driveable {
         void drive();
     }
 
-    static abstract class Vehicle {
+    private static abstract class Vehicle {
         private final String brand;
         private final String model;
         private final String color;
@@ -68,7 +68,7 @@ public class Inheritance {
         }
     }
 
-    static class Motorcycle extends Vehicle implements Rideable {
+    private static class Motorcycle extends Vehicle implements Rideable {
 
         protected Motorcycle(String brand, String model, String color) {
             super(brand, model, color);
@@ -91,7 +91,7 @@ public class Inheritance {
         }
     }
 
-    static class Car extends Vehicle implements Driveable {
+    private static class Car extends Vehicle implements Driveable {
 
         protected Car(String brand, String model, String color) {
             super(brand, model, color);

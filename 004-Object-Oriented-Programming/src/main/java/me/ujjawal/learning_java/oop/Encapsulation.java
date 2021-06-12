@@ -22,11 +22,11 @@ public class Encapsulation {
         System.out.println("personA --> " + personA);
     }
 
-    enum Gender {
+    private enum Gender {
         MALE, FEMALE
     }
 
-    static class Person {
+    private static class Person {
         private String name;
         private int age;
         private Gender gender;

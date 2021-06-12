@@ -22,11 +22,11 @@ public class Abstraction {
         }
     }
 
-    enum DomesticationType {
+    private enum DomesticationType {
         DOMESTIC, WILD
     }
 
-    static abstract class Animal {
+    private static abstract class Animal {
         //~~ Properties of Animal ~~
         private final DomesticationType domesticationType;
 
@@ -61,7 +61,7 @@ public class Abstraction {
         }
     }
 
-    static class Dog extends Animal {
+    private static class Dog extends Animal {
         Dog() {
             super(DomesticationType.DOMESTIC);
         }
@@ -72,7 +72,7 @@ public class Abstraction {
         }
     }
 
-    static class Wolf extends Animal {
+    private static class Wolf extends Animal {
         Wolf() {
             super(DomesticationType.WILD);
         }

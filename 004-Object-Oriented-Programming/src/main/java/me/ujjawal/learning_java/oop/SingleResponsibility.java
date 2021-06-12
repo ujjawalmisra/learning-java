@@ -17,8 +17,7 @@ public class SingleResponsibility {
 
     }
 
-
-    static class AdditionOperator {
+    private static class AdditionOperator {
         public int sum(int a, int b) {
             return a + b;
         }
@@ -36,13 +35,13 @@ public class SingleResponsibility {
         }
     }
 
-    static class MultiplicationOperator {
+    private static class MultiplicationOperator {
         public int multiply(int a, int b) {
             return a * b;
         }
     }
 
-    static class Person {
+    private static class Person {
         private String name;
         private Integer age;
 

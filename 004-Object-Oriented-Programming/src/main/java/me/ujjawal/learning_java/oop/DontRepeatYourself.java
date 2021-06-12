@@ -19,27 +19,31 @@ public class DontRepeatYourself {
         nonRepeatedCodeSample.print(person);
     }
 
-    static class RepeatedCodeSample {
+    private enum Gender {
+        MALE, FEMALE
+    }
+
+    private static class RepeatedCodeSample {
         public void print(Person person) {
-            if(null != person.getFirstName()) {
+            if (null != person.getFirstName()) {
                 System.out.println("firstName --> " + person.getFirstName());
             }
-            if(null != person.getLastName()) {
+            if (null != person.getLastName()) {
                 System.out.println("lastName --> " + person.getLastName());
             }
-            if(null != person.getAge()) {
+            if (null != person.getAge()) {
                 System.out.println("age --> " + person.getAge());
             }
-            if(null != person.getGender()) {
+            if (null != person.getGender()) {
                 System.out.println("gender --> " + person.getGender());
             }
-            if(null != person.getZipcode()) {
+            if (null != person.getZipcode()) {
                 System.out.println("zipcode --> " + person.getZipcode());
             }
         }
     }
 
-    static class NonRepeatedCodeSample {
+    private static class NonRepeatedCodeSample {
         public void print(Person person) {
             print("firstName", person.getFirstName());
             print("lastName", person.getLastName());
@@ -49,22 +53,18 @@ public class DontRepeatYourself {
         }
 
         private void print(String propertyName, Object propertyValue) {
-            if(null != propertyValue) {
+            if (null != propertyValue) {
                 System.out.println(propertyName + " --> " + propertyValue);
             }
         }
     }
 
-    private static enum Gender {
-        MALE, FEMALE;
-    }
-
     private static class Person {
-        private String firstName;
-        private String lastName;
-        private Integer age;
-        private Gender gender;
-        private String zipcode;
+        private final String firstName;
+        private final String lastName;
+        private final Integer age;
+        private final Gender gender;
+        private final String zipcode;
 
         public Person(String firstName, String lastName, Integer age, Gender gender, String zipcode) {
             this.firstName = firstName;

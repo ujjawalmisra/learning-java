@@ -55,7 +55,7 @@ public class Polymorphism {
         System.out.println("wolf.get().makeASound() --> " + wolf.get().makeASound());
     }
 
-    static class AdditionOperator {
+    private static class AdditionOperator {
 
         public int sum(int a, int b) {
             return a + b;
@@ -86,7 +86,7 @@ public class Polymorphism {
         }
     }
 
-    static class Person {
+    private static class Person {
         private final String name;
         private final Integer age;
 
@@ -108,7 +108,7 @@ public class Polymorphism {
         }
     }
 
-    static class Animal {
+    private static class Animal {
         public String makeASound() {
             return "what what";
         }
@@ -118,7 +118,7 @@ public class Polymorphism {
         }
     }
 
-    static class Dog extends Animal {
+    private static class Dog extends Animal {
         @Override
         public String makeASound() {
             return "bark bark";
@@ -134,7 +134,7 @@ public class Polymorphism {
         }
     }
 
-    static class Wolf extends Animal {
+    private static class Wolf extends Animal {
 
         @Override
         public String makeASound() {
