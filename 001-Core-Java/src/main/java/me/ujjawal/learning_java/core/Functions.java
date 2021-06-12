@@ -72,6 +72,7 @@ public class Functions {
 
     /**
      * Computes the sum of 2 integers
+     *
      * @param a
      * @param b
      * @return the computed sum
@@ -82,6 +83,7 @@ public class Functions {
 
     /**
      * Computes the factorial of a number
+     *
      * @param n the number whose factorial has to be computed
      * @return the computed factorial
      */
@@ -94,6 +96,7 @@ public class Functions {
 
     /**
      * Computes the sum of any number of integers
+     *
      * @param x varargs sequence of integers
      * @return the computed sum
      */

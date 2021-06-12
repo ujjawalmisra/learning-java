@@ -36,10 +36,10 @@ public class StringManipulations {
          * Other methods of manipulation.
          */
         System.out.println("~~~~ other string manipulations ~~~~");
-        String [] words = sentence.split("\\s");
+        String[] words = sentence.split("\\s");
         print("split(\"\\\\s\") --> ", words, ", ");
 
-        String [] words2 = sentence.split("\\s", 2);
+        String[] words2 = sentence.split("\\s", 2);
         print("split(\"\\\\s\", 2) --> ", words2, " | ");
 
         CharSequence csPart = sentence.subSequence(10, 19);
@@ -71,7 +71,7 @@ public class StringManipulations {
     private static void print(String message, String[] tokens, String separator) {
         System.out.print(message);
         for (int j = 0; j < tokens.length; j++) {
-            System.out.print(tokens[j] + (j < tokens.length-1 ? separator : ""));
+            System.out.print(tokens[j] + (j < tokens.length - 1 ? separator : ""));
         }
         System.out.println("");
     }

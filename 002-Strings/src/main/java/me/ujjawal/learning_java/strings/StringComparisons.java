@@ -7,7 +7,7 @@ public class StringComparisons {
          */
         System.out.println(String.format("%s.endsWith(%s) --> %b", "India", "dia", "India".endsWith("dia")));
         System.out.println(String.format("%s.startsWith(%s) --> %b", "India", "In", "India".startsWith("In")));
-        System.out.println(String.format("%s.startsWith(%s, %d) --> %b", "India", "di", 2, "India".startsWith("di",2)));
+        System.out.println(String.format("%s.startsWith(%s, %d) --> %b", "India", "di", 2, "India".startsWith("di", 2)));
 
         /**
          * ~~ Lexical comparison ~~
@@ -28,9 +28,9 @@ public class StringComparisons {
          * ~~ Regional matches ~~
          */
         System.out.println(String.format("%s.regionMatches(%d,%s,%d,%d) --> %b", "monitor", 0, "money", 0, 3,
-                "monitor".regionMatches(0,"money",0,3)));
+                "monitor".regionMatches(0, "money", 0, 3)));
         System.out.println(String.format("%s.regionMatches(%b,%d,%s,%d,%d) --> %b", true, "monitor", 0, "Money", 0, 3,
-                "monitor".regionMatches(true,0,"Money",0,3)));
+                "monitor".regionMatches(true, 0, "Money", 0, 3)));
 
         /**
          * ~~ Regex matches ~~

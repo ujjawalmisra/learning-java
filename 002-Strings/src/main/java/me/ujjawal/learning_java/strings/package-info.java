@@ -7,6 +7,5 @@
  *     <li>{@link me.ujjawal.learning_java.strings.StringBuilders}</li>
  *     <li>{@link me.ujjawal.learning_java.strings.StringBuffers}</li>
  * </ol>
- *
  */
 package me.ujjawal.learning_java.strings;

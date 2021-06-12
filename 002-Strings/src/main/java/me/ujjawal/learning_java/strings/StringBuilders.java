@@ -53,11 +53,11 @@ public class StringBuilders {
          */
         sb.insert(3, " -- ");
         System.out.println("insert() --> " + sb);
-        sb.delete(3,7);
+        sb.delete(3, 7);
         System.out.println("delete() --> " + sb);
-        sb.setCharAt(2,',');
+        sb.setCharAt(2, ',');
         System.out.println("setCharAt() --> " + sb);
-        sb.replace(0,2, "Hello");
+        sb.replace(0, 2, "Hello");
         System.out.println("replace() --> " + sb);
         System.out.println("reverse() --> " + sb.reverse());
         System.out.println("reverse() --> " + sb.reverse());

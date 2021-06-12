@@ -23,9 +23,9 @@ public class SingletonPattern {
         }
 
         public static Kohinoor getInstance() {
-            if(null == INSTANCE) {
+            if (null == INSTANCE) {
                 synchronized (Kohinoor.class) {
-                    if(null == INSTANCE) {
+                    if (null == INSTANCE) {
                         INSTANCE = new Kohinoor();
                     }
                 }

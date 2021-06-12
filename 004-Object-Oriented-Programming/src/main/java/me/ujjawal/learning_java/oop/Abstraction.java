@@ -3,11 +3,11 @@ package me.ujjawal.learning_java.oop;
 public class Abstraction {
 
     public static void main(String[] args) {
-        Animal[] animals = new Animal[] {
+        Animal[] animals = new Animal[]{
                 new Dog(),
                 new Wolf()
         };
-        for(Animal animal : animals) {
+        for (Animal animal : animals) {
             System.out.println(animal.getClass().getName() + " --> " + animal.makeASound());
             System.out.println(animal.getClass().getName() + " instanceof Animal --> " + (animal instanceof Animal));
             System.out.println(animal.getClass().getName() + " instanceof Dog --> " + (animal instanceof Dog));

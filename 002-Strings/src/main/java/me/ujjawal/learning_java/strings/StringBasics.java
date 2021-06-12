@@ -10,7 +10,7 @@ package me.ujjawal.learning_java.strings;
  */
 public class StringBasics {
     public static void main(String[] args) {
-        char [] charArrayHello = {'H', 'e', 'l', 'l', 'o'};
+        char[] charArrayHello = {'H', 'e', 'l', 'l', 'o'};
 
         /**
          * Following is the approach of creating a String object using a literal. The literal itself is a part of
@@ -60,7 +60,7 @@ public class StringBasics {
         System.out.println("Desert Long --> " + supplementaryCharacterSurrogateForDesertLong);
         System.out.println("length of (Han for East) --> " + hanForEast.length());
         System.out.println("length of (Desert Long) --> " + supplementaryCharacterSurrogateForDesertLong.length());
-        System.out.println("codePoints in (Han for East) --> " + hanForEast.codePointCount(0,hanForEast.length()));
+        System.out.println("codePoints in (Han for East) --> " + hanForEast.codePointCount(0, hanForEast.length()));
         System.out.println("codePoints in (Desert Long) --> " +
                 supplementaryCharacterSurrogateForDesertLong.codePointCount(0,
                         supplementaryCharacterSurrogateForDesertLong.length()));

@@ -86,7 +86,7 @@ public class BuilderPattern {
             }
 
             Pizza build() {
-                if(null != pizza) {
+                if (null != pizza) {
                     return null;
                 }
                 pizza = new Pizza(size, crust, extraCheese, toppings);

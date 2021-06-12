@@ -33,7 +33,7 @@ public class StringConversions {
         System.out.println("j --> " + j);
 
         Float k = Float.valueOf("3.14");
-        System.out.println("k --> " + (1.2f+k));
+        System.out.println("k --> " + (1.2f + k));
 
 
         /**
@@ -47,8 +47,8 @@ public class StringConversions {
 
         String strK = Float.toString(k);
         int indexOfDot = strK.indexOf('.');
-        String strKDecimal = strK.substring(0,indexOfDot);//[0,indexOfDot)
-        String strKPrecision = strK.substring(indexOfDot+1);
+        String strKDecimal = strK.substring(0, indexOfDot);//[0,indexOfDot)
+        String strKPrecision = strK.substring(indexOfDot + 1);
         System.out.println(String.format("In %s the decimal is %s and precision is %s", strK, strKDecimal,
                 strKPrecision));
 
