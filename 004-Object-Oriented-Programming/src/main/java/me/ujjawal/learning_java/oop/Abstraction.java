@@ -1,5 +1,12 @@
 package me.ujjawal.learning_java.oop;
 
+/**
+ * Abstraction is an OOP concept which specifies that complex details should get hidden or abstracted away from the
+ * user of a functionality. For example, in order to drive a car we don't need to know how the car internally
+ * connects all its parts and transmits energy or signals.<br>
+ * In Java we achieve Abstraction by creating Class that may have hidden properties and functionalities and only
+ * exposes those functionalities that are important for the user of that Class.<br>
+ */
 public class Abstraction {
 
     public static void main(String[] args) {
@@ -16,12 +23,12 @@ public class Abstraction {
     }
 
     enum DomesticationType {
-        DOMESTIC, WILD;
+        DOMESTIC, WILD
     }
 
     static abstract class Animal {
         //~~ Properties of Animal ~~
-        private DomesticationType domesticationType;
+        private final DomesticationType domesticationType;
 
         protected Animal(DomesticationType domesticationType) {
             this.domesticationType = domesticationType;
