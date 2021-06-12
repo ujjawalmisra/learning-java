@@ -17,7 +17,7 @@ public class StringComparisons {
          * b. 0 ==> both are equal
          * c. Greater than 0 ==> this will come after the other string
          */
-        System.out.println(String.format("%s.compareTo(%s) --> %d", "monitor", "money", "monitor".compareTo("money")));
+        System.out.println(String.format("%s.compareTo(%s) --> %d", "money", "monitor", "money".compareTo("monitor")));
         System.out.println(String.format("%s.compareToIgnoreCase(%s) --> %d", "Monitor", "money",
                 "Monitor".compareToIgnoreCase("money")));
         System.out.println(String.format("%s.equals(%s) --> %b", "Money", "money", "Money".equals("money")));
@@ -29,7 +29,7 @@ public class StringComparisons {
          */
         System.out.println(String.format("%s.regionMatches(%d,%s,%d,%d) --> %b", "monitor", 0, "money", 0, 3,
                 "monitor".regionMatches(0, "money", 0, 3)));
-        System.out.println(String.format("%s.regionMatches(%b,%d,%s,%d,%d) --> %b", true, "monitor", 0, "Money", 0, 3,
+        System.out.println(String.format("%s.regionMatches(%b,%d,%s,%d,%d) --> %b", "monitor", true, 0, "Money", 0, 3,
                 "monitor".regionMatches(true, 0, "Money", 0, 3)));
 
         /**
