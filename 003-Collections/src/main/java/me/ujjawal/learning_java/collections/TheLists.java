@@ -18,6 +18,7 @@ public class TheLists {
          */
         System.out.println("~~~~ elementary operations ~~~~");
         List<Integer> list = new ArrayList<>();
+
         seed(list);
         System.out.println("list --> " + list);
 
@@ -31,10 +32,28 @@ public class TheLists {
          * ~~ Converting to and from arrays ~~
          */
         System.out.println("~~~~ convert to/from arrays ~~~~");
+
         List<Integer> oddList = Arrays.asList(3, 5, 1);
         System.out.println("oddList --> " + oddList);
         Integer[] oddArr = oddList.toArray(new Integer[0]);
         System.out.println("oddArr --> " + Arrays.toString(oddArr));
+
+        // Long way of creating a collection
+        List<Integer> oddList1 = new ArrayList<>();
+        oddList1.add(3);
+        oddList1.add(5);
+        oddList1.add(1);
+        System.out.println("oddList1 --> " + oddList1);
+
+        // Non-popular way of creating a collection with calling of methods post creation as a part of the variable
+        //definition
+        List<Integer> oddList2 = new ArrayList<Integer>() {{
+            add(3);
+            add(5);
+            add(1);
+
+        }};
+        System.out.println("oddList2 --> " + oddList2);
 
         /**
          * ~~ Bulk operations ~~
@@ -67,6 +86,7 @@ public class TheLists {
         /**
          * ~~ Aggregations ~~
          */
+        System.out.println("~~~~ aggregations ~~~~");
         System.out.println("sum --> " + sum(list));
         System.out.println("min --> " + min(list));
         System.out.println("max --> " + max(list));
@@ -106,6 +126,16 @@ public class TheLists {
     }
 
     private static int sum(List<Integer> list) {
+        /**
+         * list ==> 1,2,3,4,5 (Collection)
+         * Stream --> Continuous flow of some-type of data.
+         * list.stream() ==> 1..2.....3..4.5....6 --> Stream<Integer>
+         * list.stream().mapToInt(e -> e) ==> 1..2.....3..4.5....6 --> IntStream (int)
+         * list.stream().mapToInt(e -> e).sum() ==> 21
+         * MapReduce ==> Map + Reduce
+         * Map: function(x) --> y
+         * Reduce: function(.......y) --> R
+         */
         return list.stream().mapToInt(e -> e).sum();
     }
 
