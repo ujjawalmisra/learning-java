@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class TheArrays {
     public static void main(String[] args) {
 
-        int[] numbers = {1,2,3,4,5};//Integer
-        for(int n : numbers) {
+        int[] numbers = {1, 2, 3, 4, 5};//Integer
+        for (int n : numbers) {
             System.out.println(n);
         }
 

@@ -15,17 +15,17 @@ public class TheMaps {
         map.putIfAbsent("Davien", 21);
 
         System.out.println("~~~~ Lookup ~~~~");
-        for(String key : Arrays.asList("Davien", "Pallavi", "Deepika", "Alu")) {
+        for (String key : Arrays.asList("Davien", "Pallavi", "Deepika", "Alu")) {
             System.out.println(key + " --> " + map.getOrDefault(key, -1));
         }
 
         System.out.println("~~~~ All elements ~~~~");
-        for(String key : map.keySet()) {
+        for (String key : map.keySet()) {
             System.out.println(key + " --> " + map.get(key));
         }
 
         System.out.println("~~~~ EntrySet ~~~~");
-        for(Map.Entry<String, Integer> entry : map.entrySet()) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " --> " + entry.getValue());
         }
     }

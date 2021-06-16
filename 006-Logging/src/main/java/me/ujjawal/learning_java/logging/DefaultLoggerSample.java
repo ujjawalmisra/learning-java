@@ -12,7 +12,7 @@ public class DefaultLoggerSample {
         logger.info("This is a message from logger.info");
         logger.warning("This is a message from logger.warning");
         logger.setLevel(Level.ALL);
-        for(Level level : new Level[] {Level.OFF, Level.SEVERE, Level.WARNING, Level.INFO, Level.CONFIG, Level.FINE,
+        for (Level level : new Level[]{Level.OFF, Level.SEVERE, Level.WARNING, Level.INFO, Level.CONFIG, Level.FINE,
                 Level.FINER, Level.FINEST, Level.ALL}) {
 
             logger.info(String.format("Level --> %s, %d, %b", level.getName(), level.intValue(),
@@ -20,7 +20,7 @@ public class DefaultLoggerSample {
         }
         logger.severe("This is a message from logger.severe");
         logger.info("level: " + logger.getLevel().getName());
-        int sum = sum(1,2);
+        int sum = sum(1, 2);
         logger.info("sum:" + sum);
 
     }

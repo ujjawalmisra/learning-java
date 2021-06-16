@@ -19,6 +19,11 @@ public class TheBasicTest {
 
     }
 
+    @FunctionalInterface
+    private static interface TestMethod {
+        void test() throws Exception;
+    }
+
     private static class SampleCalculator {
         Integer sum(Integer x, Integer y) throws CalculatorException {
             if (null == x) {
@@ -96,14 +101,14 @@ public class TheBasicTest {
 
         void loopThroughTestMethods() {
             Map<String, TestMethod> testMethods = getTestMethods();
-            for(Map.Entry<String, TestMethod> entry : testMethods.entrySet()) {
+            for (Map.Entry<String, TestMethod> entry : testMethods.entrySet()) {
                 loopThroughTestCases(entry.getKey(), entry.getValue());
             }
         }
 
         void loopThroughTestCases(String testMethodName, TestMethod testMethod) {
             List<Object[]> testData = getTestData();
-            for(int i = 0; i < testData.size(); i++) {
+            for (int i = 0; i < testData.size(); i++) {
                 Object[] testDatum = testData.get(i);
                 currentTestDatum = testDatum;
                 beforeTestCase();
@@ -118,7 +123,7 @@ public class TheBasicTest {
         }
 
         List<Object[]> getTestData() {
-            return new ArrayList<Object[]>(){{
+            return new ArrayList<Object[]>() {{
                 add(new Object[]{1, 2, 3, null, -1, null});
                 add(new Object[]{1, 0, 1, null, 1, null});
                 add(new Object[]{0, 4, 4, null, -4, null});
@@ -149,7 +154,7 @@ public class TheBasicTest {
             try {
                 int sum = calculator.sum(x, y);
                 assertEquals(resultOfSum, sum);
-            }catch(Exception e) {
+            } catch (Exception e) {
                 assertException(exceptionClassOfSum, e);
             }
         }
@@ -158,13 +163,13 @@ public class TheBasicTest {
             try {
                 int sum = calculator.sub(x, y);
                 assertEquals(resultOfSub, sum);
-            } catch (Exception e){
+            } catch (Exception e) {
                 assertException(exceptionClassOfSub, e);
             }
         }
 
         private <T> void assertEquals(T expected, T found) {
-            if(expected != found) {
+            if (expected != found) {
                 throw new AssertionError("expected: " + expected + ", found: " + found);
             }
         }
@@ -172,7 +177,7 @@ public class TheBasicTest {
         private void assertException(Class<? extends Exception> expectedExceptionClass, Exception e) {
             boolean passed = (null == expectedExceptionClass && null == e) ||
                     (null != expectedExceptionClass && null != e && expectedExceptionClass.isAssignableFrom(e.getClass()));
-            if(!passed) {
+            if (!passed) {
                 throw new AssertionException("exception expected: " + null + ", found: " + e.getClass().getName());
             }
         }
@@ -182,10 +187,5 @@ public class TheBasicTest {
         public AssertionException(String message) {
             super(message);
         }
-    }
-
-    @FunctionalInterface
-    private static interface TestMethod {
-        void test() throws Exception;
     }
 }
