@@ -4,6 +4,7 @@
  *     <li>{@link me.ujjawal.learning_java.exceptions.TryCatch}</li>
  *     <li>{@link me.ujjawal.learning_java.exceptions.Throws}</li>
  *     <li>{@link me.ujjawal.learning_java.exceptions.TryWithResources}</li>
+ *     <li>{@link me.ujjawal.learning_java.exceptions.CheckedExceptions}</li>
  *     <li>{@link me.ujjawal.learning_java.exceptions.UncheckedExceptions}</li>
  * </ol>
  */

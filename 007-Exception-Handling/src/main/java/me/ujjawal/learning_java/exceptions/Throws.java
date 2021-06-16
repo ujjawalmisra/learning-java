@@ -20,7 +20,7 @@ public class Throws {
             System.out.println(String.format("%d + %d --> %d", 2, 3, calculator.add(2, 3)));
             System.out.println(String.format("%d - %d --> %d", 2, 3, calculator.sub(2, 3)));
             System.out.println(String.format("%d * %d --> %d", 2, 3, calculator.mul(2, 3)));
-            System.out.println(String.format("%d / %d --> %d", 2, 3, calculator.div(-2, -3)));
+            System.out.println(String.format("%d / %d --> %d", 2, 3, calculator.div(-2, 3)));
         } catch (CalculatorException e) {
             e.printStackTrace();
         }
@@ -49,13 +49,13 @@ public class Throws {
         }
 
         private void validate(int... numbers) throws CalculatorException {
-            int[] invalidNumers = Arrays.stream(numbers).filter(e -> e < 1).toArray();
-            if (0 < invalidNumers.length) {
+            int[] invalidNumbers = Arrays.stream(numbers).filter(e -> e < 1).toArray();
+            if (0 < invalidNumbers.length) {
                 /**
                  * An exception object can be created like any other object using the new operator.
                  * To raise/throw an exception us the throw keyword.
                  */
-                throw new CalculatorException("Invalid numbers: " + Arrays.toString(invalidNumers));
+                throw new CalculatorException("Invalid numbers: " + Arrays.toString(invalidNumbers));
             }
         }
     }
