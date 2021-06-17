@@ -11,9 +11,9 @@
         </Console>
     </Appenders>
     <Loggers>
-        <!-- <Logger name="me.ujjawal.learning_java.logging.Log4j2LoggerSample" level="INFO" additivity="false">
+        <Logger name="me.ujjawal.learning_java.logging.Log4j2LoggerSample" level="INFO" additivity="false">
             <AppenderRef ref="Console" />
-        </Logger> -->
+        </Logger>
         <Root level="TRACE">
             <AppenderRef ref="Console" />
         </Root>

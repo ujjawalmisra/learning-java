@@ -16,6 +16,7 @@ public class Log4j2LoggerSample {
     private static final Logger LOGGER = LogManager.getLogger(Log4j2LoggerSample.class);
 
     public static void main(String[] args) {
+        // message/log-data --> Logger --> Filter --> Formatter --> Appender
         LOGGER.fatal("This is a message from logger.fatal");
         LOGGER.warn("This is a message from logger.warn");
         LOGGER.info("This is a message from logger.info");
