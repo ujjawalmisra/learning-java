@@ -1,6 +1,7 @@
 /**
  * <ol>
  *     <li>{@link me.ujjawal.learning_java.logging.DefaultLoggerSample}</li>
+ *     <li>{@link me.ujjawal.learning_java.logging.Log4j2LoggerSample}</li>
  *     <li>{@link me.ujjawal.learning_java.logging.TheLogger}</li>
  *     <li>{@link me.ujjawal.learning_java.logging.TheAppender}</li>
  *     <li>{@link me.ujjawal.learning_java.logging.TheLayout}</li>
