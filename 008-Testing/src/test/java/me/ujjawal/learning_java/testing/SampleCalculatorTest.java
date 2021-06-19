@@ -12,14 +12,20 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.params.provider.Arguments.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class SampleCalculatorTest {
 
-    private static final Logger LOGGER = LogManager.getLogger(SampleCalculatorTest.class);;
+    private static final Logger LOGGER = LogManager.getLogger(SampleCalculatorTest.class);
 
     private UsingJUnit.SampleCalculator calculator;
+
+    public SampleCalculatorTest() {
+        super();
+        calculator = new UsingJUnit.SampleCalculator();
+    }
 
     @BeforeAll
     static void setup() {
@@ -31,9 +37,18 @@ class SampleCalculatorTest {
         LOGGER.info("In teardown");
     }
 
-    public SampleCalculatorTest() {
-        super();
-        calculator = new UsingJUnit.SampleCalculator();
+    static Stream<Arguments> args_sum() {
+        return Stream.of(
+                arguments(1, 2, 3),
+                arguments(4, 5, 9)
+        );
+    }
+
+    static Stream<Arguments> args_sum_exceptions() {
+        return Stream.of(
+                arguments(null, 2),
+                arguments(4, null)
+        );
     }
 
     @BeforeEach
@@ -56,13 +71,6 @@ class SampleCalculatorTest {
         }
     }
 
-    static Stream<Arguments> args_sum() {
-        return Stream.of(
-                arguments(1, 2, 3),
-                arguments(4, 5, 9)
-        );
-    }
-
     @ParameterizedTest
     @MethodSource("args_sum_exceptions")
     void test_sum_exceptions(Integer x, Integer y) {
@@ -72,13 +80,6 @@ class SampleCalculatorTest {
         } catch (UsingJUnit.CalculatorException e) {
             //succeeded
         }
-    }
-
-    static Stream<Arguments> args_sum_exceptions() {
-        return Stream.of(
-                arguments(null, 2),
-                arguments(4, null)
-        );
     }
 
 }
