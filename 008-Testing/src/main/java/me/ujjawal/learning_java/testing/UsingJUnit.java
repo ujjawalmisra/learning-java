@@ -17,7 +17,7 @@ public class UsingJUnit {
 
     /**
      * Project --> Deploy --> Application | Service
-     *
+     * <p>
      * Service (MY) --> Used by other services (A,B,C)
      * A -- calling --> MY
      * B -- calling --> MY
@@ -28,7 +28,7 @@ public class UsingJUnit {
      * MY -- calling --> E
      * D,E ==> Upstream services, in context of MY
      * Downstream -- call --> MY -- calls --> Upstream services
-     *
+     * <p>
      * Project -- made up of multiple modules --> packages --> classes --> functions --> lines-of-code
      * We write tests to ensure that whatever we have written is as per specifications.
      * functions --> Our functions should be as per the definition of the function. Definition of the function is
@@ -37,7 +37,7 @@ public class UsingJUnit {
      * Smallest unit which we can test is functions. Because we can call them.
      * This type of testing, where we try to ensure a function behaves the way it is supposed to behave is called
      * Unit Testing.
-     *
+     * <p>
      * When we test with actual upstream services or resources it is called Integration Testing.
      */
 
@@ -46,8 +46,8 @@ public class UsingJUnit {
     public static void main(String[] args) {
         SampleCalculator calculator = new SampleCalculator();
         try {
-            LOGGER.info("sum(%d,%d): %d", 1, 2, calculator.sum(1,2));
-            LOGGER.info("sub(%d,%d): %d", 1, 2, calculator.sub(1,2));
+            LOGGER.info("sum(%d,%d): %d", 1, 2, calculator.sum(1, 2));
+            LOGGER.info("sub(%d,%d): %d", 1, 2, calculator.sub(1, 2));
         } catch (CalculatorException e) {
             e.printStackTrace();
         }
