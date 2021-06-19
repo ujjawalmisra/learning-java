@@ -1,0 +1,11 @@
+plugins {
+    id 'me.ujjawal.learning_java.java-application-conventions'
+}
+
+dependencies {
+    implementation group: 'com.google.auto.service', name: 'auto-service', version: '1.0-rc7'
+}
+
+configurations {
+    providedCompile
+}

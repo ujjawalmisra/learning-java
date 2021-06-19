@@ -3,5 +3,20 @@ plugins {
 }
 
 dependencies {
-    implementation group: 'com.google.auto.service', name: 'auto-service', version: '1.0-rc7'
+    implementation project(':module-helpers')
+    annotationProcessor project(':module-helpers')
 }
+
+//tasks.withType(JavaCompile) {
+//    doFirst {
+//        println "AnnotationProcessorPath for $name is ${options.getAnnotationProcessorPath().getFiles()}"
+//    }
+//}
+//
+//configurations {
+//    providedCompile
+//}
+//
+//sourceSets {
+//    main { compileClasspath += configurations.providedCompile }
+//}
