@@ -1,19 +1,19 @@
-#Docker
+# Docker
 
-##Evolution of servers
+## Evolution of servers
 
-###Bare metal
+### Bare metal
 The physical server having essential hardware components - CPU, Memory, Disk, Network Card - and devoid of input 
 devices like keyboard and output devices like monitor.
 
-###Node
+### Node
 Bare metal with OS running. When we deploy our application they run as a process on the node. A physcial server running
 only few processes, i.e. utilizing limited CPU, or using only limited storage, might prove to be a costly investment.
 However, its difficult to keep increasing the hardware on a single node when traffic increases. This is because a 
 node can practically support only so much hardware. Adding more hardware to the same node to support increased traffic 
 is called _Vertical Scaling_.
 
-###Virtualization
+### Virtualization
 In order to reduce the cost, virtualization can be used. Hypervizor helps in converting a bare metal (Type-1 Hypervisor) 
 or node (Type-2 Hypervisor) to  multiple virtual machines (VMs). VMs on the same machine are isolated from each other 
 but run over the same underlying  hardware. When we deploy our application they run as a process on the node. 
@@ -22,7 +22,7 @@ because they have to pass through an extra layer -- the hypervisor.
 With a VM image in place, as traffic increases more replicas of the process can be created by launching more VMs from 
 the VM image. This is called _Horizontal Scaling_.
 
-###Docker
+### Docker
 Docker is a light-weight process that contains a OS kernel and files/resources to run. Docker containers directly run 
 on the node as processes. Because of the small size and running directly on the node the docker container might be 
 faster than the process running on a VM. Dockers support Horizontal Scaling through Containers.
