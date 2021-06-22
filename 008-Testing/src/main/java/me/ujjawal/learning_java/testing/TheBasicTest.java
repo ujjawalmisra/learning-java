@@ -13,9 +13,9 @@ public class TheBasicTest {
     public static void main(String[] args) {
 
         SampleCalculatorTest sampleCalculatorTest = new SampleCalculatorTest();
-        sampleCalculatorTest.beforeTest();
+        sampleCalculatorTest.beforeTest();//@Before
         sampleCalculatorTest.loopThroughTestMethods();
-        sampleCalculatorTest.afterTest();
+        sampleCalculatorTest.afterTest();//@After
 
     }
 
@@ -111,14 +111,14 @@ public class TheBasicTest {
             for (int i = 0; i < testData.size(); i++) {
                 Object[] testDatum = testData.get(i);
                 currentTestDatum = testDatum;
-                beforeTestCase();
+                beforeTestCase();//@BeforeEach
                 boolean passed = runTest(testMethod);
                 if (passed) {
                     logger.info(String.format("TestMethod [%s] TestCase [%d] passed", testMethodName, i));
                 } else {
                     logger.severe(String.format("TestMethod [%s] TestCase [%d] failed", testMethodName, i));
                 }
-                afterTestCase();
+                afterTestCase();//@AfterEach
             }
         }
 
