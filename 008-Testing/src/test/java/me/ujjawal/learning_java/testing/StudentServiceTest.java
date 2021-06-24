@@ -25,7 +25,7 @@ class StudentServiceTest {
         Mockito.when(studentDao.save(Mockito.any(UsingMockito.Student.class))).thenReturn(expectedStudent);
 
         UsingMockito.StudentService studentService = new UsingMockito.StudentService(studentDao);
-        UsingMockito.Student resultStudent = studentService.createStudent("S", "A");
+        UsingMockito.Student resultStudent = studentService.createStudent("Shaurya", "Agarwal");
         assertEquals(expectedStudent, resultStudent);
     }
 }
