@@ -35,6 +35,20 @@ public class UsingMockito {
             this.studentDao = studentDao;
         }
 
+        /**
+         * This method takes firstName and lastName for a student and gets an entry created in the database with the
+         * help of a DAO. firstName should not be null. lastName may be null. Before creating the entry the firstName
+         * and lastName are trimmed.
+         * @param firstName String representing the first name of a student. This should not be null.
+         * @param lastName String representing the last name of a student. This may be null.
+         * @return Student entry created in the database
+         * @throws IllegalArgumentException If firstName is null.
+         *
+         * 1. Takes 2 Strings and returns Student
+         * 2. Throws IllegalArgumentException in case firstName is null.
+         * 3. No exception thrown if lastName is null.
+         * 4. Trims firstName and lastName before storing Student.
+         */
         Student createStudent(String firstName, String lastName) {
             if(null == firstName) {
                 throw new IllegalArgumentException("firstName shouldn't be null");
@@ -80,6 +94,7 @@ public class UsingMockito {
          */
         Student save(Student student) {
             student.setId(studentIdSequence.incrementAndGet());
+            //insert into student(first_name, last_name) values('','');
             throw new UnsupportedOperationException();
         }
 
