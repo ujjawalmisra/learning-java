@@ -3,9 +3,12 @@ plugins {
 }
 
 def versionLog4j2 = '2.14.1'
+def versionLombok = '1.18.20'
 
 dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: versionLog4j2
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: versionLog4j2
+    compile group: 'org.projectlombok', name: 'lombok', version: versionLombok
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: versionLombok
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.22'
 }
