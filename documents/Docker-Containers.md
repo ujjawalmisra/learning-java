@@ -37,12 +37,14 @@ You can check the available images on: https://hub.docker.com/
 
 ```shell script
 docker pull postgres:latest
+docker pull cassandra:latest
 ```
 
 ### Check the version
 
 ```shell script
 docker image inspect postgres | grep PG_VERSION | uniq
+docker image inspect cassandra | grep CASSANDRA_VERSION | uniq
 ```
 
 ### Run
@@ -51,6 +53,7 @@ Read more about possible options: https://docs.docker.com/engine/reference/comma
 
 ```shell script
 docker run --name zs-intern-pgsql -d -e POSTGRES_PASSWORD=root123 -p 2006:5432 postgres:latest
+docker run --name zs-intern-cassandra -d -p 2003:9042 cassandra:latest
 ```
 
 In order to stop the container use:
@@ -88,6 +91,33 @@ INSERT INTO employee (id, email, name, phone, city)
   VALUES(2, 'robin@postgresqltest.com', 'Robin', '9848022339', 'Hyderabad');
 INSERT INTO employee (id, email, name, phone, city) 
   VALUES(3, 'rahman@postgresqltest.com', 'Rahman', '9848022330', 'Chennai');
+```
+
+### Cassandra
+
+Connect to cassandra via cqlsh
+```shell script
+docker exec -it zs-intern-cassandra cqlsh -p 2003
+```
+
+Create a testable data
+```cassandraql
+CREATE KEYSPACE zs_intern_test WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+-- DESCRIBE keyspaces;
+USE zs_intern_test;
+CREATE TABLE employee(
+  id int PRIMARY KEY,
+  email text,
+  name text,
+  phone text,
+  city text
+);
+INSERT INTO employee (id, email, name, phone, city) 
+  VALUES(1, 'ram@cassandratest.com', 'Ram', '9848022338', 'Bangalore');
+INSERT INTO employee (id, email, name, phone, city) 
+  VALUES(2, 'robin@cassandratest.com', 'Robin', '9848022339', 'Hyderabad');
+INSERT INTO employee (id, email, name, phone, city) 
+  VALUES(3, 'rahman@cassandratest.com', 'Rahman', '9848022330', 'Chennai');
 ```
 
 
