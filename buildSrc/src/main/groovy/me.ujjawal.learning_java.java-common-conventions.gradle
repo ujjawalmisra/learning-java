@@ -15,7 +15,7 @@ repositories {
 }
 
 version("0.1.0")
-group("me.ujjawal.learning.java")
+group("me.ujjawal.learning_java")
 
 dependencies {
     constraints {
