@@ -8,4 +8,4 @@ A code based walk-through to learning Java.
 
 
 If you are a part of the Java Learning Track and need to submit an assignment, 
-please refer the [Assignment Submission Guidelines](https://raw.githubusercontent.com/ujjawalmisra/learning-java/Assignment-Submission-Guidelines.md).
+please refer the [Assignment Submission Guidelines](https://github.com/ujjawalmisra/learning-java/blob/main/Assignments-Submission-Guidelines.md).
