@@ -1,4 +1,4 @@
-# Git
+# Git Basics
 
 ## Top 20 commands that we use everyday
 
@@ -23,6 +23,11 @@ git push
 git pull
 git stash
 ```
+
+### Local & Remote Repository
+
+![A pictorial representation of local and remote repositories and flow of commands.](https://raw.githubusercontent.com/ujjawalmisra/learning-java/main/images/git-commands.png)
+
 
 ### git config
 ```shell
