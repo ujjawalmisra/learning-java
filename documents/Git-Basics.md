@@ -171,3 +171,6 @@ Usage: git stash list
 Usage: git stash drop
 ```
 
+## Resources
+1. [A success Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+2. [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
