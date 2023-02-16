@@ -73,7 +73,7 @@ So, go ahead, create those labels and start using them.
 8. Implement the functionalities only required by the assignments as mentioned in 
    [Assignments](https://github.com/ujjawalmisra/learning-java/blob/main/documents/Assignments.md).
 9. Whenever raising a PR: <br>
-   1. Add a brief description of was the problem statement and what was done.
+   1. Add a brief description of what was the problem statement and what was done.
    2. Make sure to add the reviewers
 10. Always respond to each and every review comments on the PR.
 11. Follow the [Standard Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) 
