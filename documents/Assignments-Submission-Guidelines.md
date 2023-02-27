@@ -50,8 +50,8 @@ So, go ahead, create those labels and start using them.
    eg : Assignment 3 | CRUD Operations on Products
 2. While creating commit messages, please ensure to have the correct nomenclature.
    Nomenclature for commit messages to be as follows: <br>
-   &lt;Assignment Number&gt; | &lt;Contributor name&gt; | &lt;High level representation of the commit&gt; <br>
-   eg : Assignment 3 | John Doe | Added DAO create functionality
+   &lt;Assignment Number&gt; | &lt;High level representation of the commit&gt; <br>
+   eg : Assignment 3 | Added DAO create functionality
 3. Please be aware of the files being committed. Using `git add .` commits all files that have changed. 
    Only commit source files that should be there in the project for others to use and modify. 
    Generated (output, class) files should **not** be committed. Files local to a developer machine, like intellij or m2, 
@@ -73,7 +73,7 @@ So, go ahead, create those labels and start using them.
 8. Implement the functionalities only required by the assignments as mentioned in 
    [Assignments](https://github.com/ujjawalmisra/learning-java/blob/main/documents/Assignments.md).
 9. Whenever raising a PR: <br>
-   1. Add a brief description of was the problem statement and what was done.
+   1. Add a brief description of what was the problem statement and what was being done.
    2. Make sure to add the reviewers
 10. Always respond to each and every review comments on the PR.
 11. Follow the [Standard Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) 
